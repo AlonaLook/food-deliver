@@ -1,0 +1,31 @@
+.burger{
+
+  &BtnOpen, &BtnClose{
+    width: 20px;
+    height: 20px;
+
+    @media screen and (min-width: 640px){
+      width: 30px;
+      height: 30px;
+    }
+
+    @media screen and (min-width: 980px){
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &BtnOpen{
+    background: url('./images/close.svg') no-repeat;
+    background-size: cover;
+  }
+
+  &BtnClose{
+    background: url('./images/burger.svg') no-repeat;
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1024px){
+    display: none;
+  }
+}

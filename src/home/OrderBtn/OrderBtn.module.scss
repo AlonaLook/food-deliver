@@ -1,0 +1,26 @@
+.orderBtn {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 4px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #008800;
+  transition: all 0.3s ease-in 0.3s;
+
+  @media screen and (min-width: 380px){
+    bottom: 20px;
+  }
+
+  &:hover{
+    background-color: #0000fe;
+    box-shadow: 5px 5px 10px #000000;
+  }
+}

@@ -1,0 +1,12 @@
+.checkout{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.wrapper{
+  width: 30%;
+
+  &:last-child{
+    width: 68%;
+  }
+}

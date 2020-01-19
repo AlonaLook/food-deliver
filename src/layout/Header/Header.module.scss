@@ -1,0 +1,48 @@
+.header{
+  display: flex;
+  position: fixed;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  min-height: 60px;
+  background: black;
+  z-index: 10;
+
+  &Content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menuWrapper {
+  display: none;
+
+  @media screen and (min-width: 1024px){
+    display: block;
+  }
+}
+
+.search {
+  margin-left: 5px;
+
+  @media screen and (min-width: 980px){
+    margin-left: 0;
+  }
+}
+
+.basket {
+  margin-left: 5px;
+
+  @media screen and (min-width: 980px){
+    margin-left: 0;
+  }
+}
+
+.burger {
+  margin-left: 5px;
+
+  @media screen and (min-width: 640px){
+    margin-left: 0;
+  }
+}

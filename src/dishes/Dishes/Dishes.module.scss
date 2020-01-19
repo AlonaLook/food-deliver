@@ -1,0 +1,28 @@
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and(min-width: 1024px){
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &Dropdown{
+      margin-bottom: 20px;
+
+    @media screen and(min-width: 670px){
+     margin-left:  20px;
+
+      &:first-child{
+        margin-left: 0;
+      }
+    }
+
+    @media screen and(min-width: 1024px){
+      margin-bottom: 0;
+    }
+  }
+}

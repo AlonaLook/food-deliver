@@ -1,0 +1,26 @@
+.products{
+  flex: 1;
+  margin: 0 1%;
+
+  &Title{
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+  }
+}
+
+.listProducts{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+
+  &Item{
+    border-bottom: 1px solid grey;
+    padding: 10px;
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+}

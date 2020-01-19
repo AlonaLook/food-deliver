@@ -1,0 +1,74 @@
+.menuNavItem{
+  position: relative;
+  display: block;
+  padding: 0 15px;
+  background: black;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in 0.5s;
+
+
+
+  @media screen and (min-width: 1024px){
+    display: inline-block;
+    background: transparent;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 14px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%) rotate(10deg);
+      background: #D3D3D3;
+    }
+
+    &:first-child::before{
+      display: none;
+    }
+  }
+}
+.subMenu{
+  position: static;
+  transition: all 0.5s ease-in 0.5s;
+  z-index: 2;
+
+  @media screen and (min-width: 1024px){
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+}
+
+.menuNavItem:hover{
+  @media screen and (min-width: 1024px){
+    .subMenu{
+      display: block;
+    }
+  }
+}
+
+.menuNavLink{
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: all ease-in 0.3s;
+
+  &:hover{
+    color: #6195ED;
+  }
+
+  @media screen and (min-width: 1024px){
+    display: inline-block;
+    color: #D3D3D3;
+  }
+
+  &Active{
+    color: #6195ED;
+
+    @media screen and (min-width: 1024px){
+      color: #FFF;
+    }
+  }
+}

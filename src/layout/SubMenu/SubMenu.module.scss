@@ -1,0 +1,47 @@
+.subMenu{
+  list-style-image: url('./images/next.svg');
+  padding: 15px 0;
+
+  @media screen and (min-width: 1024px){
+    width: 200px;
+    list-style-type: none;
+    list-style-image: none;
+    padding: 18px 0 0;
+  }
+
+  &Item{
+    position: relative;
+    padding: 4px 20px;
+    background: #1d1b1b61;
+    transition: all linear 0.5s;
+
+    &::after{
+      position: absolute;
+      content: '';
+      width: 90%;
+      height: 1px;
+      bottom: 0;
+      left: 5%;
+      background: lightgrey;
+    }
+
+    &:last-child{
+
+      @media screen and (min-width: 1024px){
+        &:after{
+          display: none;
+        }
+      }
+    }
+
+    &:hover{
+      background: lightgrey;
+    }
+  }
+}
+
+.menuLink{
+  display: block;
+  text-decoration: none;
+  color: white;
+}

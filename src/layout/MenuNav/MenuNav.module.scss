@@ -1,0 +1,15 @@
+.menuNav{
+  position: absolute;
+  width: 90vh;
+  margin: 0;
+  padding: 0;
+  top: 100%;
+  right: 0;
+  list-style-type: none;
+  transition: all 0.4s ease-in 0.4s;
+
+  @media screen and (min-width: 1024px){
+    position: relative;
+    width: auto;
+  }
+}

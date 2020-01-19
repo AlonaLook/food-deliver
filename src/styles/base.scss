@@ -1,0 +1,29 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Lato', 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content {
+  padding-top: 60px;
+
+  @media screen and (min-width: 1024px){
+    padding-bottom: 88px;
+    min-height: 100vh;
+  }
+}

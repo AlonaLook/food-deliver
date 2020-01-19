@@ -1,0 +1,71 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+
+  @media screen and (min-width: 380px){
+    font-size: 1rem;
+  }
+
+  &Info {
+    display: inline-block;
+    width: 20px;
+    padding: 0 2px;
+    text-align: center;
+
+    @media screen and (min-width: 380px){
+      width: 30px;
+      padding: 0 5px;
+    }
+  }
+
+  &Basket {
+    display: block;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+    margin-left: 5px;
+    background: url('./images/shopping-cart.svg') no-repeat;
+    background-size: cover;
+    transition: all 0.2s ease-in-out;
+
+    @media screen and (min-width: 380px){
+      margin-left: 10px;
+    }
+
+    @media screen and (min-width: 640px){
+      margin-left: 15px;
+    }
+    &:hover {
+      background: url('./images/cart.svg') no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &Btn {
+    background: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid black;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #B0E7FF;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}

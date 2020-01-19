@@ -1,0 +1,53 @@
+.user {
+  font-size: 1.1rem;
+
+  &Title{
+    margin: 0 0 20px;
+    font-size: 2rem;
+  }
+
+  &Data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &Label {
+      display: block;
+      font-weight: bold;
+    }
+
+    &Input {
+      display: block;
+      min-height: 40px;
+      min-width: 100px;
+      padding: 0 10px;
+      margin-left: 10px;
+      font-size: 1.1rem;
+    }
+  }
+
+  &Submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &Btn {
+      width: 30%;
+      height: 40px;
+      padding: 0 10px;
+      border: none;
+      border-radius: 30px;
+      background-color: grey;
+      font-size: 1.1rem;
+      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+
+      &:hover{
+        background-color: #0000fe;
+        box-shadow: 5px 5px 10px grey;
+        color: white;
+      }
+    }
+  }
+}
