@@ -66,7 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-### `URLS to Data in JSON Blob service`
+### URLS to Data in JSON Blob service
 
 ### `URL to JSON Blob API for header section`
 https://jsonblob.com/5423c2bd-2d4e-11ea-96d0-7dba27598886
@@ -109,3 +109,36 @@ https://jsonblob.com/fd9c0191-378c-11ea-8559-a3cfb581c100
 
 ### `URL to JSON Blob API for footer section`
 https://jsonblob.com/c7b18060-2d55-11ea-96d0-35a9b0786fb5
+
+## Carousel
+The carousel block was implemented on the home page.
+For realization, this task was used the npm module "react-responsive-carousel".
+ 
+## Menu navigation and sub-menu.
+These items were implemented in the header section.
+This code you can find in the layout directory.
+
+## Bread crumbs
+For realization, this task was used the npm module "react-router-dynamic-breadcrumbs".
+This code you can find in the layout directory.
+
+## Map.
+This task implemented on the Contact page, link to a page is in the footer section.
+For realization, this task was used the npm module "google-map-react".
+This code you can find in the contact directory.
+
+## Filter and Sort
+Task was implemented on the Dishes page.
+
+## Search
+Task was implemented on the Search results page.
+This code you can find in the search directory.
+
+## Complex diner
+Task was implemented on the Complex page.
+This code you can find in the dishes directory.
+
+## Custom complex
+Task was implemented on the Custom complex page.
+This code you can find in the dishes directory.
+

@@ -13,7 +13,7 @@ const Map = memo(({ zoom, center }) => {
     new maps.Marker({
       map,
       position: center,
-      title: 'FoodDelivery'
+      title: 'FoodDeliver'
     });
   }, [center]);
 
