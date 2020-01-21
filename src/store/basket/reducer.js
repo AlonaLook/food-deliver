@@ -1,7 +1,7 @@
 import { BASKET_ADD, BASKET_REMOVE } from './actions';
 
 //Calculate total price for all products
-const getTotalPrice = (array) => {
+const getTotalPrice = array => {
   return array.reduce((acc, cur) => {
     return acc + cur.price * cur.count;
   }, 0);
@@ -37,13 +37,12 @@ const basketReducer = (state = initialState, action) => {
       if (product) {
         // If target product was found in basket extent it with new metadata and update counter
         products = state.products.map(item => {
-
           return product.id === item.id
             ? {
-                  ...item,
-                count: item.count + payload.count,
-                metaData: [...item.metaData, ...payload.metaData]
-              }
+              ...item,
+              count: item.count + payload.count,
+              metaData: [...item.metaData, ...payload.metaData]
+            }
             : item
         });
       } else {

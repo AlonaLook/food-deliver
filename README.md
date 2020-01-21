@@ -68,46 +68,46 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 ### URLS to Data in JSON Blob service
 
-### `URL to JSON Blob API for header section`
+### `HEADER`
 https://jsonblob.com/5423c2bd-2d4e-11ea-96d0-7dba27598886
 
-### `URL to JSON Blob API for home page`
+### `HOME`
 https://jsonblob.com/dfedabd1-2cd6-11ea-afe5-df6b12e21271
 
-### `URL to JSON Blob API for complex page`
+### `COMPLEX`
 https://jsonblob.com/8bcc5a15-2d8f-11ea-96d0-1397db3967e8
 
-### `URL to JSON Blob API for custom complex page`
+### `CUSTOM COMPLEX`
 https://jsonblob.com/34a91a7f-2fcd-11ea-beca-e95dd41eab11
 
-### `URL to JSON Blob API for contact page`
+### `CONTACT`
 https://jsonblob.com/06e127b2-330a-11ea-aeba-cf64de090957
 
-### `URL to JSON Blob API for pizza page`
+### `PIZZA`
 https://jsonblob.com/27b41506-353a-11ea-98e5-69ba3705b20f
 
-### `URL to JSON Blob API for sushi page`
+### `SUSHI`
 https://jsonblob.com/6bf6bc1c-354c-11ea-98e5-895488e057ee
 
-### `URL to JSON Blob API for dishes page`
+### `DISHES`
 https://jsonblob.com/06603d6c-3569-11ea-98e5-db6db992abe7
 
-### `URL to JSON Blob API for drinks page`
+### `DRINKS`
 https://jsonblob.com/d055dbea-358d-11ea-98e5-d1cb14ff548b
 
-### `URL to JSON Blob API for cocktails page`
+### `COCKTAILS`
 https://jsonblob.com/74941412-384d-11ea-8750-9592d17127a8
 
-### `URL to JSON Blob API for hot drinks page`
+### `HOT DRINKS`
 https://jsonblob.com/fcc7dd6f-384f-11ea-8750-61f4ba316d06
 
-### `URL to JSON Blob API for virgin drinks page`
+### `VIRGIN DRINKS`
 https://jsonblob.com/bf85ebdd-3852-11ea-8750-f36feb171f2b
 
-### `URL to JSON Blob API for search result page`
+### `SEARCH RESULT`
 https://jsonblob.com/fd9c0191-378c-11ea-8559-a3cfb581c100
 
-### `URL to JSON Blob API for footer section`
+### `FOOTER`
 https://jsonblob.com/c7b18060-2d55-11ea-96d0-35a9b0786fb5
 
 ## Carousel

@@ -7,8 +7,8 @@ import ListMeal from '../ListMeal';
 // Store
 import pizzaFetchAction from '../../store/pizza/actions';
 
-const mapStateToProps = ({ pizzas }) => {
-  const {listPizzas} = pizzas;
+const mapStateToProps = ({ pizza }) => {
+  const {listPizzas} = pizza;
 
   return {
     listPizzas
