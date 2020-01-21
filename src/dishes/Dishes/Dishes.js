@@ -44,7 +44,7 @@ const mapDispatchToProps = {
 };
 
 
-const Dishes = ({dishes, dishesFetch, filterOptions, sortOptions}) => {
+const Dishes = ({ dishes, dishesFetch, filterOptions, sortOptions }) => {
 
   const [selectedFilter, setFilter] = useState('');
   const [selectedSort, setSort] = useState('');

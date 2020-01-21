@@ -28,6 +28,14 @@ const Home = memo(({ fetchData, data }) => {
     fetchData();
   }, []);
 
+  if(data.loading){
+    return <div>Loading...</div>
+  }
+
+  if(data.error){
+    return <div>Loading error</div>;
+  }
+
   return (
     <>
       <div className={style.wrapper}>

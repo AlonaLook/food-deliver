@@ -67,7 +67,7 @@ const store = createStore(
     basket: basketReducer,
     custom: customReducer,
     contact: contactReducer,
-    pizzas: pizzaReducer,
+    pizza: pizzaReducer,
     sushi: sushiReducer,
     dishes: dishesReducer,
     drinks: drinksReducer,

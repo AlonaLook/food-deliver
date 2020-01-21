@@ -5,27 +5,29 @@ import { connect } from 'react-redux';
 import style from './CounterPurchases.module.scss';
 
 // Store
-import {addToBasketAction} from '../../store/basket/actions';
+import { addToBasketAction } from '../../store/basket/actions';
 
 
 const mapDispatchToProps = {
   addToBasketAction
 };
 
+const defaultCount = 1;
+
 const CounterPurchases = (props) => {
-  const defaultCount = 1;
   const [count, setCount] = useState(defaultCount);
 
   const increase = useCallback(() => {
     setCount(count + 1);
-  }, [setCount]);
+  }, [count]);
 
   const decrease = useCallback(() => {
     setCount(count - 1);
-  }, [setCount]);
+  }, [count]);
 
   const addToBasket = () => {
     const metaData = props.metaData ? [{ ...props.metaData, count }] : [];
+
     props.addToBasketAction(props.product, count, metaData);
     setCount(defaultCount);
   };
