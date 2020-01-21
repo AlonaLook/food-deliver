@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 
 //Styles
 import style from './Search.module.scss';
-
 
 
 const Search = ({history}) => {
@@ -19,6 +18,7 @@ const Search = ({history}) => {
 
     setQuery('');
   };
+
 
   const queryChangeHandler = e => {
     setQuery(e.target.value);

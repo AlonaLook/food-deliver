@@ -1,7 +1,9 @@
+@import '../../styles/_variables';
+
 .contacts {
   margin-bottom: 30px;
 
-  @media screen and(min-width: 890px){
+  @media screen and(min-width: $break-point-before-middle){
     display: flex;
     justify-content: space-between;
   }
@@ -12,7 +14,7 @@
     min-height: 50vh;
     box-shadow: 2px 5px 15px grey;
 
-    @media screen and(min-width: 890px){
+    @media screen and(min-width: $break-point-before-middle){
       width: 50%;
       margin: 0;
     }
@@ -25,7 +27,7 @@
   margin: 0 auto;
   padding: 0;
 
-  @media screen and(min-width: 890px){
+  @media screen and(min-width: $break-point-before-middle){
     width: 47%;
     margin: 0;
     padding: 0 20px;
@@ -36,10 +38,10 @@
     flex-direction: column;
     justify-content: center;
     padding: 10px 0;
-    border-bottom: 1px solid #aaaaaa;
+    border-bottom: 1px solid $silver-chalice-color;
     font-size: 1.1rem;
 
-    @media screen and(min-width: 480px){
+    @media screen and(min-width: $break-point-before-small){
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
@@ -59,7 +61,7 @@
 
 .description{
 
-  @media screen and(min-width: 480px){
+  @media screen and(min-width: $break-point-before-small){
     margin-left: 15px;
   }
 }

@@ -17,8 +17,8 @@ const DishesRoute = () => {
   return(
     <Switch>
       <Route path={`${path}/complex`} component={ComplexRoute} />
-      <Route exact path={`${path}/pizza`} component={Pizza} />
-      <Route exact path={`${path}/sushi`} component={Sushi} />
+      <Route path={`${path}/pizza`} component={Pizza} />
+      <Route path={`${path}/sushi`} component={Sushi} />
       <Route exact path={path} component={Dishes} />
     </Switch>
   );

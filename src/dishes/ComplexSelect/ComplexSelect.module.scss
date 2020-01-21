@@ -1,3 +1,5 @@
+@import '../../styles/_variables';
+
 .products{
   flex: 1;
   margin: 0 1%;
@@ -12,15 +14,19 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border: 1px solid grey;
+  border: 1px solid $silver-color;
   margin-bottom: 20px;
 
   &Item{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid $silver-color;
     padding: 10px;
 
     &:last-child{
       border-bottom: none;
     }
   }
+}
+
+.label{
+  margin-left: 5px;
 }

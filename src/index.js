@@ -18,21 +18,19 @@ import './styles/index.scss';
 
 //Components
 import Header from './layout/Header';
-import Footer from "./layout/Footer";
+import Footer from './layout/Footer';
 import NotFound  from './layout/NotFound';
 import AppBreadcrumbs  from './layout/AppBreadcrumbs';
 
 import Home from './home/Home';
 import DishesRoute from './dishes/DishesRoute';
-import ActionsRoute from './actions/ActionsRoute';
+import ActionsRoute from './offers/ActionsRoute';
 import Contact from './contacts/Contact';
 import Checkout from './checkout/Checkout';
 import SearchResults from './search/SearchResults';
-import DrinksRoute from "./drinks/DrinksRoute";
-import KitchensRoute from "./kitchens/KitchensRoute";
-import About from './about/About';
-import MakeOrder from './order/MakeOrder';
-
+import DrinksRoute from './drinks/DrinksRoute';
+import KitchensRoute from './kitchens/KitchensRoute';
+import PageFill from './components/PageFill';
 
 const routes = {
   '/': 'Home',
@@ -40,10 +38,10 @@ const routes = {
   '/contact': 'Contact',
   '/about': 'About',
   '/how': 'How to make order',
-  '/actions': 'Actions',
-  '/actions/dishes': 'Actions Dishes',
-  '/actions/drinks': 'Actions Drinks',
-  '/actions/kitchens': 'Actions Kitchens',
+  '/actions': 'Offers',
+  '/actions/dishes': 'Offers Dishes',
+  '/actions/drinks': 'Offers Drinks',
+  '/actions/kitchens': 'Offers Kitchens',
   '/kitchens': 'Kitchens',
   '/kitchens/italian': 'Italian Kitchen',
   '/kitchens/ukrainian': 'Ukrainian Kitchen',
@@ -70,8 +68,8 @@ ReactDOM.render(
         <Switch>
           <Route path='/actions' component={ActionsRoute} />
           <Route path='/contact' component={Contact} />
-          <Route path='/about' component={About} />
-          <Route path='/how' component={MakeOrder} />
+          <Route path='/about' component={PageFill} />
+          <Route path='/how' component={PageFill} />
           <Route path='/dishes' component={DishesRoute} />
           <Route path='/drinks' component={DrinksRoute} />
           <Route path='/kitchens' component={KitchensRoute} />

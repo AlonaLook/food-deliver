@@ -1,4 +1,4 @@
-import React, { useEffect }from 'react';
+import React, { useEffect, memo }from 'react';
 import { connect } from 'react-redux';
 
 //Components
@@ -19,14 +19,15 @@ const mapDispatchToProps = {
   fetchData: virginDrinksFetchAction
 };
 
-const VirginDrinks = ({virginDrinks, fetchData}) => {
+
+const VirginDrinks = memo(({ virginDrinks, fetchData }) => {
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  return(<ListMeal listMeal={virginDrinks}/>);
-};
+  return (<ListMeal listMeal={virginDrinks} />);
+});
 
 export default connect(
   mapStateToProps,

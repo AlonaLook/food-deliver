@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { connect } from 'react-redux';
 
 // Style
@@ -16,13 +16,13 @@ const CounterPurchases = (props) => {
   const defaultCount = 1;
   const [count, setCount] = useState(defaultCount);
 
-  const increase = () => {
+  const increase = useCallback(() => {
     setCount(count + 1);
-  };
+  }, [setCount]);
 
-  const decrease = () => {
+  const decrease = useCallback(() => {
     setCount(count - 1);
-  };
+  }, [setCount]);
 
   const addToBasket = () => {
     const metaData = props.metaData ? [{ ...props.metaData, count }] : [];

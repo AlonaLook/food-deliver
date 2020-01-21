@@ -1,29 +1,34 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 //Style
 import style from './CardProduct.module.scss';
 import CounterPurchases from '../CounterPurchases';
 
-const CardProduct = ({lunch}) => {
+
+const CardProduct = memo(({lunch}) => {
   return (
       <div className={style.card}>
         <div className={style.wrapper}>
           <img src={lunch.img} alt={`${lunch.name} icon`} className={style.cardImg}/>
         </div>
-        <h2 className={style.cardTitle}>{lunch.name}</h2>
+        <div className={style.cardTitle}>{lunch.name}</div>
         <div className={style.content}>
           {lunch.kitchen&&
-            <h3 className={style.contentTitle}>
+            <div className={style.contentTitle}>
               Кухня - {lunch.kitchen}
-            </h3>
+            </div>
           }
-          {lunch.descriptions && lunch.descriptions.map((description, index) => {
-            return (
-                <p className={style.contentDescription} key={index}>
-                  - {description}
-                </p>
-            );
-          })}
+          {lunch.descriptions && <ul className={style.contentDescription}>
+            {
+              lunch.descriptions.map((description, index) => {
+                return (
+                  <li className={style.contentDescriptionItem} key={index}>
+                    - {description}
+                  </li>
+                );
+              })
+            }
+          </ul>}
         </div>
         <div className={style.contentPrice}>
           {lunch.price} грн
@@ -33,6 +38,6 @@ const CardProduct = ({lunch}) => {
         </div>
       </div>
   );
-};
+});
 
 export default CardProduct;

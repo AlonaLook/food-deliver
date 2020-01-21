@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 //Styles
 import {burger, burgerBtnOpen, burgerBtnClose} from './Burger.module.scss';
-import MenuNav from "../../layout/MenuNav";
+
+//Components
+import MenuNav from '../../layout/MenuNav';
 
 const Burger = ({ categories }) => {
-
   const [open, setOpen] = useState(false);
 
-  const handleOpenClick = () => {
+  const handleOpenClick = useCallback(() => {
     setOpen(!open);
-  };
+  }, [setOpen, open]);
 
   return(
     <div className={burger}>
-      <div className={open ? burgerBtnOpen : burgerBtnClose} onClick={handleOpenClick}/>
+      <div className={open ? burgerBtnOpen : burgerBtnClose} onClick={handleOpenClick} />
       {open && <MenuNav categories={categories}/>}
     </div>
   );

@@ -1,29 +1,45 @@
+@import '../../styles/_variables';
+
 .user {
   font-size: 1.1rem;
 
   &Title{
-    margin: 0 0 20px;
+    margin: 0 0 10px;
     font-size: 2rem;
+    font-weight: bold;
   }
 
   &Data {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-bottom: 20px;
+
+    @media screen and(min-width: $break-point-extra-large) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     &Label {
       display: block;
       font-weight: bold;
+      margin-bottom: 5px;
+
+      @media screen and(min-width: $break-point-extra-large) {
+       margin-bottom: 0;
+      }
     }
 
     &Input {
       display: block;
       min-height: 40px;
-      min-width: 100px;
+      width: 100%;
       padding: 0 10px;
-      margin-left: 10px;
       font-size: 1.1rem;
+
+      @media screen and(min-width: $break-point-extra-large) {
+        margin-left: 10px;
+        min-width: 100px;
+        max-width: 64%;
+      }
     }
   }
 
@@ -33,20 +49,19 @@
     justify-content: flex-end;
 
     &Btn {
-      width: 30%;
+      min-width: 30%;
       height: 40px;
       padding: 0 10px;
       border: none;
       border-radius: 30px;
-      background-color: grey;
+      background-color: $silver-color;
       font-size: 1.1rem;
       transition: all 0.3s ease-in-out;
       font-weight: bold;
 
       &:hover{
-        background-color: #0000fe;
-        box-shadow: 5px 5px 10px grey;
-        color: white;
+        box-shadow: 5px 5px 10px $silver-color;
+        color: $primary-light-color;
       }
     }
   }

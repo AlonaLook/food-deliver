@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import queryString from 'query-string';
 
 //Components
@@ -14,7 +14,6 @@ import searchFetchAction from '../../store/search/actions';
 
 
 const mapStateToProps = (state) => {
-
   const {listResults} = state.searchResults;
 
   return {
@@ -30,7 +29,8 @@ const mapDispatchToProps = {
 const SINGULAR = ' item';
 const PlURAL = ' items';
 
-const SearchResults = ({ location, searchFetch, listResults }) => {
+
+const SearchResults = memo(({ location, searchFetch, listResults }) => {
   const { query } = queryString.parse(location.search);
   const countItems = listResults.length;
 
@@ -51,7 +51,7 @@ const SearchResults = ({ location, searchFetch, listResults }) => {
       </>
   );
 
-};
+});
 
 export default connect(
   mapStateToProps,

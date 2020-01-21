@@ -1,10 +1,11 @@
-import React, { useCallback } from 'react';
+import React, { memo, useCallback } from 'react';
 
 //Styles
 import style from './DropDown.module.scss';
 
 
-const DropDown = React.memo(({options = [], title = '', handleChange, selectedOption}) => {
+const DropDown = memo(({options = [], title = '', handleChange, selectedOption}) => {
+
   const getSelectValue = useCallback(e => {
     handleChange(e.target.value);
   }, [handleChange]);
@@ -36,6 +37,5 @@ const DropDown = React.memo(({options = [], title = '', handleChange, selectedOp
     </div>
   );
 });
-
 
 export default DropDown;

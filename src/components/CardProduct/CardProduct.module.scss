@@ -1,3 +1,5 @@
+@import '../../styles/_variables';
+
 .card {
   width: 100%;
   padding-bottom: 50px;
@@ -17,7 +19,9 @@
     left: 0;
     right: 0;
     padding: 20px;
-    background: #ffffff87;
+    background: rgba($primary-light-color, 0.8);
+    font-size: 1.5rem;
+    font-weight: bold;
   }
 
   &Counter{
@@ -25,11 +29,11 @@
     bottom: 8px;
     right: 5px;
 
-    @media screen and (min-width: 380px){
+    @media screen and (min-width: $break-point-extra-small){
       right: 10px;
     }
 
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: $break-point-small){
       right: 20px;
     }
   }
@@ -47,9 +51,17 @@
 
   &Title {
     margin: 0 0 15px 0;
+    font-size: 1.17rem;
+    font-weight: bold;
   }
 
   &Description {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &DescriptionItem {
     padding: 0;
     margin: 0 0 15px 0;
   }

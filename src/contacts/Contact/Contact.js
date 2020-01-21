@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import { connect } from 'react-redux';
 
 
@@ -12,8 +12,9 @@ import Map from '../Map';
 // Store
 import contactFetchAction from '../../store/contact/actions.js';
 
-const mapStateToProps = (state) => {
-  const { listContacts, coords } = state.contact;
+const mapStateToProps = ({ contact }) => {
+  const { listContacts, coords } = contact;
+
   return {
     coords,
     listContacts
@@ -24,7 +25,8 @@ const mapDispatchToProps = {
   fetchData: contactFetchAction
 };
 
-const Contact = ({ coords, listContacts, fetchData }) =>{
+
+const Contact = memo(({ coords, listContacts, fetchData }) =>{
 
   useEffect(() => {
     fetchData();
@@ -52,7 +54,7 @@ const Contact = ({ coords, listContacts, fetchData }) =>{
         </ul>
       </div>
     );
-};
+});
 
 export default connect(
   mapStateToProps,

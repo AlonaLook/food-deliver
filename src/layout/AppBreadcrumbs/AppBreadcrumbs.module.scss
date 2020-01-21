@@ -1,9 +1,11 @@
+@import '../../styles/_variables';
+
 .crumbs{
   list-style-type: none;
   padding: 0;
   margin: 20px 0;
 
-  @media screen and(min-width: 1024px){
+  @media screen and(min-width: $break-point-large){
     margin: 23px 0 40px;
   }
 
@@ -15,7 +17,7 @@
     padding: 0 10px;
 
     a {
-      color: grey;
+      color: $silver-color;
       text-decoration: none;
     }
 
@@ -41,7 +43,7 @@
 
     &Active{
       position: relative;
-      color: #000000;
+      color: $primary-dark-color;
       display: inline-block;
       margin-left: 10px;
       padding: 0 10px;

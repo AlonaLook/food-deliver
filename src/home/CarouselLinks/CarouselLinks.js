@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {Link} from 'react-router-dom';
 
 // Carousel
@@ -8,34 +8,38 @@ import { Carousel } from 'react-responsive-carousel';
 //Styles
 import style from './CarouselLinks.module.scss';
 
-const CarouselLinks = ({carousel}) => {
+
+const CarouselLinks = memo(({carousel = []}) => {
+
   return (
     <div className={style.food}>
-      <Carousel
-        showArrows={false}
-        infiniteLoop={true}
-        autoPlay={true}
-        showThumbs={false}
-      >
-        {carousel.map(({id, name, pageUrl, imgUrl}) => {
-          return(
-            <Link
-              to={pageUrl}
-              className={style.foodLink}
-              title={name}
-              key={id}
-            >
-              <img
-                src={imgUrl}
-                alt={`${name} icon`}
-                className={style.foodImg}
-              />
-            </Link>
-          );
-        })}
-      </Carousel>
+      { Boolean(carousel.length)
+        && <Carousel
+          showArrows={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          showThumbs={false}
+        >
+          {carousel.map(({id, name, pageUrl, imgUrl}) => {
+            return(
+              <Link
+                to={pageUrl}
+                className={style.foodLink}
+                title={name}
+                key={id}
+              >
+                <img
+                  src={imgUrl}
+                  alt={`${name} icon`}
+                  className={style.foodImg}
+                />
+              </Link>
+            );
+          })}
+        </Carousel>
+      }
     </div>
   );
-};
+});
 
 export default CarouselLinks;

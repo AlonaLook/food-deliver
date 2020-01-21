@@ -1,14 +1,16 @@
+@import '../../styles/_variables';
+
 .menuNavItem{
   position: relative;
   display: block;
   padding: 0 15px;
-  background: black;
+  background: $primary-dark-color;
   text-transform: capitalize;
-  transition: all 0.5s ease-in 0.5s;
+  transition: all 0.5s ease-in;
 
 
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     display: inline-block;
     background: transparent;
 
@@ -20,7 +22,7 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%) rotate(10deg);
-      background: #D3D3D3;
+      background: $alto-color;
     }
 
     &:first-child::before{
@@ -30,10 +32,10 @@
 }
 .subMenu{
   position: static;
-  transition: all 0.5s ease-in 0.5s;
+  transition: all 0.2s ease-in 0.2s;
   z-index: 2;
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     position: absolute;
     top: 100%;
     left: 0;
@@ -42,7 +44,7 @@
 }
 
 .menuNavItem:hover{
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     .subMenu{
       display: block;
     }
@@ -52,23 +54,23 @@
 .menuNavLink{
   display: block;
   text-decoration: none;
-  color: white;
+  color: $primary-light-color;
   transition: all ease-in 0.3s;
 
   &:hover{
-    color: #6195ED;
+    color: $cornflower-blue-color;
   }
 
   @media screen and (min-width: 1024px){
     display: inline-block;
-    color: #D3D3D3;
+    color: $alto-color;
   }
 
   &Active{
-    color: #6195ED;
+    color: $cornflower-blue-color;
 
-    @media screen and (min-width: 1024px){
-      color: #FFF;
+    @media screen and (min-width: $break-point-large){
+      color: $primary-light-color;
     }
   }
 }

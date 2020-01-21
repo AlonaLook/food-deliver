@@ -1,3 +1,5 @@
+@import '../../styles/_variables';
+
 .userSearch{
   &Text{
     width: 100%;
@@ -16,18 +18,18 @@
      visibility: hidden;
     }
 
-    @media screen and (min-width: 380px){
+    @media screen and (min-width: $break-point-extra-small){
       &::placeholder{
         visibility: visible;
       }
     }
 
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: $break-point-small){
       min-width: 100px;
       height: 30px;
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: $break-point-large){
       min-width: 200px;
       height: 40px;
       padding: 0 10px 0 37px;

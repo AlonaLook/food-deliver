@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { memo} from 'react';
 
 //Styles
 import style from './ComplexSelect.module.scss';
 
-const ComplexSelect = ({ list = {}, selectedId, selectComplexCallback }) => {
-  //console.log('list', list);
+const ComplexSelect = memo(({ list = {}, selectedId, selectComplexCallback }) => {
 
   const changeHandler = (e) => {
     selectComplexCallback(list.name, e.target.id);
@@ -25,13 +24,13 @@ const ComplexSelect = ({ list = {}, selectedId, selectComplexCallback }) => {
                 checked={selectedId === product.id}
                 onChange={changeHandler}
               />
-              <label htmlFor={product.id}>{product.value}</label>
+              <label htmlFor={product.id} className={style.label}>{product.value}</label>
             </li>
           );
         })}
       </ul>
     </div>
   );
-};
+});
 
 export default ComplexSelect;

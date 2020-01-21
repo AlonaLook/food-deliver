@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import Breadcrumbs from 'react-router-dynamic-breadcrumbs';
 
 //Styles
 import style from './AppBreadcrumbs.module.scss';
 
-const AppBreadcrumbs = ({ mappedRoutes }) => {
+
+const AppBreadcrumbs = memo(({ mappedRoutes }) => {
   return (
     <Breadcrumbs
       mappedRoutes={mappedRoutes}
@@ -15,6 +16,6 @@ const AppBreadcrumbs = ({ mappedRoutes }) => {
       LinkComponent={(props) => <li className={style.crumbsItem}>{props.children}</li>} // Don't create link tag or <Link />. Component will wrapp props.children with <Link />
     />
   );
-};
+});
 
 export default AppBreadcrumbs;
