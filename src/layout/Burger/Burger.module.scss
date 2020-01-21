@@ -1,15 +1,17 @@
+@import '../../styles/_variables';
+
 .burger{
 
   &BtnOpen, &BtnClose{
     width: 20px;
     height: 20px;
 
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: $break-point-small){
       width: 30px;
       height: 30px;
     }
 
-    @media screen and (min-width: 980px){
+    @media screen and (min-width: $break-point-middle){
       width: 40px;
       height: 40px;
     }
@@ -25,7 +27,7 @@
     background-size: cover;
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     display: none;
   }
 }

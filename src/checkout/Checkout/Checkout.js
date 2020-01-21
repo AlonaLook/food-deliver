@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { connect } from 'react-redux';
 
 //Styles
@@ -9,12 +9,14 @@ import UserForm from '../UserForm';
 import ListPurchases from '../ListPurchases';
 
 //Store
-const mapStateToProps = ({ basket }) => ({
+const mapStateToProps =({ basket }) => ({
   basket
 });
 
 
-const Checkout = ({basket}) => {
+
+
+const Checkout =  memo(({ basket }) => {
   const {totalPrice, products, totalCount} = basket;
 
   return(
@@ -29,7 +31,7 @@ const Checkout = ({basket}) => {
 
     </div>
   );
-};
+});
 
 export default connect(
   mapStateToProps

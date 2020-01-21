@@ -1,3 +1,5 @@
+@import '../../styles/_variables';
+
 .listDays{
   margin: 0;
   list-style-type: none;
@@ -9,7 +11,7 @@
   margin: 0 0 30px;
   padding: 0;
 
-  @media screen and (min-width: 640px){
+  @media screen and (min-width: $break-point-small){
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1% 30px;
@@ -20,15 +22,15 @@
     width: 92%;
     display: flex;
     margin: 0 auto 20px;
-    background-color: white;
-    box-shadow: 5px 10px 20px darkgrey;
+    background-color: $primary-light-color;
+    box-shadow: 5px 10px 20px $silver-chalice-color;
 
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: $break-point-small){
       width: 48%;
       margin: 0 1% 20px;
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: $break-point-large){
       width: 30%;
     }
   }
@@ -52,22 +54,22 @@
     font-size: 1.1rem;
     transition: all 0.2s ease-in 0.1s;
 
-    @media screen and (min-width: 640px) {
+    @media screen and (min-width: $break-point-small) {
       width: 80%;
     }
 
-    @media screen and (min-width: 980px){
+    @media screen and (min-width: $break-point-middle){
       width: 20%;
     }
 
     &:hover{
-      background-color: #57D7F0;
-      box-shadow: 5px 10px 20px darkgrey;
-      color: white;
+      background-color: $turquoise-blue-color;
+      box-shadow: 5px 10px 20px $silver-chalice-color;
+      color: $primary-light-color;
     }
   }
 
-  @media screen and (min-width: 980px) {
+  @media screen and (min-width: $break-point-middle) {
     justify-content: flex-end;
   }
 }

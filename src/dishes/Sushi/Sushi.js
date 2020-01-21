@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, memo} from 'react';
 import { connect } from 'react-redux';
 
 //Components
@@ -9,7 +9,7 @@ import sushiFetchAction from '../../store/sushi/actions';
 
 
 const mapStateToProps = (state) => {
-  const {listSushi} = state.sushi;
+  const { listSushi } = state.sushi;
 
   return {
     listSushi
@@ -20,14 +20,14 @@ const mapDispatchToProps = {
   fetchData: sushiFetchAction
 };
 
-const Sushi = ({listSushi, fetchData}) => {
+const Sushi = memo(({ listSushi, fetchData }) => {
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  return(<ListMeal listMeal={listSushi}/>  );
-};
+  return <ListMeal listMeal={listSushi} />;
+});
 
 export default connect(
   mapStateToProps,

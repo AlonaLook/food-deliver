@@ -8,18 +8,17 @@ import {
 //Components
 import PageFill from '../../components/PageFill';
 
-
-const KitchensRoute = () => {
+const ActionsRoute = () => {
   let { path } = useRouteMatch();
 
   return(
     <Switch>
-      <Route path={`${path}/italian`} component={PageFill} />
-      <Route path={`${path}/ukrainian`} component={PageFill} />
-      <Route path={`${path}/japan`} component={PageFill} />
+      <Route path={`${path}/drinks`} component={PageFill} />
+      <Route exact path={`${path}/kitchens`} component={PageFill} />
+      <Route exact path={`${path}/dishes`} component={PageFill} />
       <Route exact path={path} component={PageFill} />
     </Switch>
   );
 };
 
-export default  KitchensRoute;
+export default  ActionsRoute;

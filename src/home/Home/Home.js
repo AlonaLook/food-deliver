@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, memo } from 'react';
 import { connect } from 'react-redux';
 
 // Styles
@@ -21,7 +21,8 @@ const mapDispatchToProps = {
   fetchData: homeFetchAction
 };
 
-const Home = ({ fetchData, data }) => {
+
+const Home = memo(({ fetchData, data }) => {
 
   useEffect(() => {
     fetchData();
@@ -35,7 +36,7 @@ const Home = ({ fetchData, data }) => {
       <ListGoods goods={data.goods} />
     </>
   );
-};
+});
 
 export default connect(
   mapStateToProps,

@@ -1,12 +1,39 @@
+@import '../../styles/_variables';
+
 .checkout{
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 30px;
+
+  @media screen and(min-width: $break-point-large) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
+
 .wrapper{
-  width: 30%;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media screen and(min-width: $break-point-small) {
+    width: 60%;
+    margin: 0 auto 20px;
+  }
+
+  @media screen and(min-width: $break-point-large) {
+    width: 30%;
+    margin: 0;
+  }
 
   &:last-child{
-    width: 68%;
+    width: 100%;
+    margin-bottom: 0;
+
+    @media screen and(min-width: $break-point-middle) {
+      width: 80%;
+    }
+
+    @media screen and(min-width: $break-point-large) {
+      width: 68%;
+      margin: 0;
+    }
   }
 }

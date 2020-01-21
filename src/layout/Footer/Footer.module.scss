@@ -1,18 +1,20 @@
+@import '../../styles/_variables';
+
 .footer {
   display: flex;
-  background-color: black;
+  background-color: $primary-dark-color;
   padding: 10px;
   min-height: 88px;
   align-items: center;
   flex-direction: column;
 
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     margin-top: -88px;
   }
 
   &CopyRight{
-    color: white;
+    color: $primary-light-color;
     padding: 15px 10px 0;
     margin: 0;
     font-size: 0.75rem;
@@ -25,7 +27,7 @@
   margin: 0;
   padding: 0;
 
-  @media screen and (min-width: 640px){
+  @media screen and (min-width: $break-point-small){
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,10 +35,10 @@
 
   &Item{
     padding: 4px 5px;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid $alto-color;
     text-align: center;
 
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: $break-point-small){
       padding: 0 15px;
       border-bottom: none;
     }
@@ -44,16 +46,16 @@
 
   &Link{
     text-decoration: none;
-    color: #D3D3D3;
+    color: $alto-color;
     text-transform: capitalize;
-    transition: all 0.3s ease-in 0.3s;
+    transition: color 0.2s ease-in;
 
     &Active{
       color: white;
     }
 
     &:hover{
-      color: #6195ED;
+      color: $cornflower-blue-color;
     }
   }
 }

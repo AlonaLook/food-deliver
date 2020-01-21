@@ -1,3 +1,5 @@
+@import './_variables';
+
 *{
   box-sizing: border-box;
 }
@@ -6,7 +8,11 @@ body {
   margin: 0;
   font-size: 16px;
   font-family: 'Lato', 'Roboto', sans-serif;
-  line-height: 1.5;
+  line-height: 1.2;
+
+  @media screen and (min-width: $break-point-extra-large){
+    line-height: 1.5;
+  }
 }
 
 code {
@@ -22,7 +28,7 @@ code {
 .content {
   padding-top: 60px;
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     padding-bottom: 88px;
     min-height: 100vh;
   }

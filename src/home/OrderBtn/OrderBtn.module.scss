@@ -1,3 +1,5 @@
+@import '../../styles/_variables';
+
 .orderBtn {
   display: flex;
   position: absolute;
@@ -9,18 +11,17 @@
   padding: 4px 20px;
   border-radius: 30px;
   text-decoration: none;
-  color: white;
+  color: $primary-light-color;
   font-size: 18px;
   font-weight: bold;
-  background-color: #008800;
-  transition: all 0.3s ease-in 0.3s;
+  background-color: $japanese-laurel-color;
+  transition: background-color 0.2s ease-in;
 
-  @media screen and (min-width: 380px){
+  @media screen and (min-width: $break-point-extra-small){
     bottom: 20px;
   }
 
   &:hover{
-    background-color: #0000fe;
-    box-shadow: 5px 5px 10px #000000;
+    background-color: $camarone-color;
   }
 }

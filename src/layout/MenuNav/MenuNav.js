@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 //style
 import {menuNav} from './MenuNav.module.scss';
@@ -7,15 +7,14 @@ import {menuNav} from './MenuNav.module.scss';
 import MenuNavItem from '../MenuNavItem';
 
 
-const MenuNav = ({categories}) => {
+const MenuNav = memo(({categories}) => {
   return (
-
-      <nav>
-        <ul className={menuNav}>
-          {categories.map(category => <MenuNavItem key={category.id} category={category} />)}
-        </ul>
-      </nav>
+    <nav>
+      <ul className={menuNav}>
+        {categories.map(category => <MenuNavItem key={category.id} category={category} />)}
+      </ul>
+    </nav>
   );
-};
+});
 
 export default MenuNav;

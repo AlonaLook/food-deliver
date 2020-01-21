@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 
@@ -12,20 +12,21 @@ const mapStateToProps = (state) => {
   }
 };
 
-const Basket = ({total}) => {
+
+const Basket = memo(({total}) => {
 
   return (
-      <div className={style.basket}>
-        {total
-          ? (<>
-              <Link to='/checkout' className={style.basketActive} />
-              <div className={style.basketTotal}>{total}</div>
-            </>)
-          : <span className={style.basketSpan}/>
-        }
-      </div>
+    <div className={style.basket}>
+      {total
+        ? (<>
+            <Link to='/checkout' className={style.basketActive} />
+            <div className={style.basketTotal}>{total}</div>
+          </>)
+        : <span className={style.basketSpan}/>
+      }
+    </div>
   );
-};
+});
 
 export default connect(
   mapStateToProps

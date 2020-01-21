@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 //Styles
 import style from './UserForm.module.scss';
 
-const UserForm = () => {
+
+const UserForm = memo(() => {
   return (
     <form action="#" method='post' name='userContact'>
       <div className={style.user}>
-        <h1 className={style.userTitle}>Enter contact data</h1>
+        <div className={style.userTitle}>Enter contact data</div>
         <div className={style.userData}>
           <label htmlFor='firstName' className={style.userDataLabel}>
             First name:
@@ -22,15 +23,15 @@ const UserForm = () => {
           />
         </div>
         <div className={style.userData}>
-          <label htmlFor='secondName' className={style.userDataLabel}>
+          <label htmlFor='lastName' className={style.userDataLabel}>
             Second name:
           </label>
           <input
             type="text"
-            placeholder='Second name'
+            placeholder='Last name'
             pattern='[A-Z]{1}[a-z]+'
-            name='secondName'
-            id='secondName'
+            name='lastName'
+            id='lastName'
             className={style.userDataInput}
           />
         </div>
@@ -39,11 +40,12 @@ const UserForm = () => {
             Phone number:
           </label>
           <input
-            type="phone"
-            placeholder='Phone number'
-            pattern='^+38({1}[0-9]{3})[0-9]{7}'
+            type="tel"
+            placeholder='+38(xxx)xxxxxxx'
+            pattern='[\+]\d{2}[\(]\d{3}[\)]\d{7}'
             name='phone'
             id='phone'
+            required
             className={style.userDataInput}
           />
         </div>
@@ -53,8 +55,8 @@ const UserForm = () => {
           </label>
           <input
             type="email"
-            placeholder='Email'
-            pattern='[A-Za-z]+@{1}\.[a-z]\.[a-z]({2}|{3})'
+            placeholder='anystring@anystring.com'
+            pattern='\S+@{1}[a-z]+\.com$'
             name='email'
             id='email'
             className={style.userDataInput}
@@ -65,8 +67,8 @@ const UserForm = () => {
             Address:
           </label>
           <input
-            type="address"
-            placeholder='Address'
+            type="text"
+            placeholder='Your address here...'
             pattern='\w+'
             name='address'
             id='address'
@@ -79,6 +81,6 @@ const UserForm = () => {
       </div>
     </form>
   );
-};
+});
 
 export default UserForm;

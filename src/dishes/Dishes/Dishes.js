@@ -11,6 +11,8 @@ import DropDown from '../../components/DropDown';
 // Store
 import dishesFetchAction from '../../store/dishes/actions';
 
+const LOWER_TO_UPPER_PRICE = 'lower';
+
 
 /**
  * Sort and filter list of dishes according to selected filter and sort parameters
@@ -23,7 +25,7 @@ const sortAndFilter = (dishes, selectedFilter, selectedSort) => {
     : dishes;
 
   return selectedSort  // Sorting the disses
-    ? filteredDishes.sort((prev, next) => selectedSort === 'lower' ? prev.price - next.price : next.price - prev.price)
+    ? filteredDishes.sort((prev, next) => selectedSort === LOWER_TO_UPPER_PRICE ? prev.price - next.price : next.price - prev.price)
     : filteredDishes;
 };
 

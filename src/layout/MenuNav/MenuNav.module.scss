@@ -1,14 +1,20 @@
+@import '../../styles/_variables';
+
 .menuNav{
   position: absolute;
-  width: 90vh;
+  width: 58vh;
   margin: 0;
   padding: 0;
   top: 100%;
   right: 0;
   list-style-type: none;
-  transition: all 0.4s ease-in 0.4s;
+  transition: all 0.3s ease-in;
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-extra-small){
+    width: 90vh;
+  }
+
+  @media screen and (min-width: $break-point-large){
     position: relative;
     width: auto;
   }

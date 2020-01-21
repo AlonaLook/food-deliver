@@ -24,16 +24,16 @@ const mapDispatchToProps = {
   fetchData: customFetchAction
 };
 
+// Get 'product' object
+// Object with product name as a key and first sub product as a value
+const getDefaultState = (products = []) => {
+  return products.reduce((acc, item) => {
+    return { ...acc, [item.name]: item.products[0].id };
+  }, {});
+};
+
 const CustomComplex = ({ main, listsProducts, fetchData }) => {
   const [product, setProduct] = useState({});
-
-  // Get 'product' object
-  // Object with product name as a key and first sub product as a value
-  const getDefaultState = (products = []) => {
-    return products.reduce((acc, item) => {
-      return { ...acc, [item.name]: item.products[0].id };
-    }, {});
-  };
 
   // Component did mount
   // Fetch data from the server
@@ -51,6 +51,7 @@ const CustomComplex = ({ main, listsProducts, fetchData }) => {
   // Update 'product' state
   // name - as a product property
   // id - as a product value
+
   const selectComplexHandler = (name, id) => {
     setProduct({ ...product, [name]: id });
   };

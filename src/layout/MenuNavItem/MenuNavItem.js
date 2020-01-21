@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { memo } from 'react';
 import { NavLink } from 'react-router-dom';
 
 //style
@@ -7,26 +7,24 @@ import { menuNavItem,  menuNavLink, menuNavLinkActive, subMenu} from './MenuNavI
 //Components
 import SubMenu from '../SubMenu';
 
-export default class MenuNavItem extends Component {
 
-  render(){
-    const { category } = this.props;
+ const MenuNavItem = memo(({ category }) => {
 
     return (
-        <li className={menuNavItem}>
-          <NavLink
-              to={`/${category.url}`}
-              className={menuNavLink}
-              activeClassName={menuNavLinkActive}
-          >
-            { category.name }
-          </NavLink>
+      <li className={menuNavItem}>
+        <NavLink
+          to={`/${category.url}`}
+          className={menuNavLink}
+          activeClassName={menuNavLinkActive}
+        >
+          { category.name }
+        </NavLink>
 
-          <div className={subMenu}>
-            <SubMenu subCategories={category.subCategories} />
-          </div>
-        </li>
+        <div className={subMenu}>
+          <SubMenu subCategories={category.subCategories} />
+        </div>
+      </li>
     );
-  }
-}
+});
 
+export default MenuNavItem;

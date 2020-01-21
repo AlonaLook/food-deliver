@@ -1,9 +1,11 @@
+@import '../../styles/_variables';
+
 .listGoods {
   margin: 0;
   padding: 0;
   list-style-type: none;
 
-  @media screen and (min-width: 640px){
+  @media screen and (min-width: $break-point-small){
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -13,22 +15,19 @@
 .goodItem {
   display: flex;
   position: relative;
-  align-items: center;
   justify-content: center;
   width: 100%;
+  min-height: 200px;
   margin-bottom: 35px;
-  border: 1px solid grey;
+  border: 1px solid $silver-color;
   border-radius: 3px;
 
-  &:before{
 
-  }
-
-  @media screen and (min-width: 640px){
+  @media screen and (min-width: $break-point-small){
     width: 49%;
   }
 
-  @media screen and (min-width: 980px){
+  @media screen and (min-width: $break-point-middle){
     width: 32%;
   }
 
@@ -41,12 +40,14 @@
 
   &Title{
     position: absolute;
+    top: 0;
     margin: 0;
     width: 100%;
     height: 40px;
     padding: 3px 20px;
-    background: #00000063;
-    color: whitesmoke;
-    top: 0;
+    background: rgba($asphalt-color, 0.63);
+    color: $wild-sand-color;
+    font-weight: bold;
+    font-size: 1.5rem;;
   }
 }

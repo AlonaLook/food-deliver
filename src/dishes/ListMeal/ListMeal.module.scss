@@ -1,10 +1,12 @@
+@import '../../styles/_variables';
+
 .listMeal{
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 
-  @media screen and (min-width: 640px){
+  @media screen and (min-width: $break-point-small){
     display: flex;
     flex-wrap: wrap;
     margin: 0 -1%;
@@ -14,20 +16,20 @@
     position: relative;
     width: 98%;
     margin: 0 auto 25px;
-    border: 1px solid grey;
+    border: 1px solid $silver-color;
     border-radius: 0 0 35px;
-    box-shadow: 5px 5px 11px lightgrey;
+    box-shadow: 5px 5px 11px $alto-color;
 
-    @media screen and (min-width: 640px){
+    @media screen and (min-width: $break-point-small){
       margin: 0 1% 25px;
       width: 48%;
     }
 
-    @media screen and (min-width: 980px){
+    @media screen and (min-width: $break-point-middle){
       width: 31%;
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: $break-point-extra-large){
       width: 23%;
     }
   }

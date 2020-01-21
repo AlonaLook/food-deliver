@@ -1,20 +1,22 @@
+@import '../../styles/_variables';
+
 .logo {
   display: inline-block;
-  color: white;
+  color: $primary-light-color;
   text-decoration: none;
   font-style: italic;
   font-weight: bold;
   font-size: 0.9rem;
 
-  @media screen and (min-width: 640px){
+  @media screen and (min-width: $break-point-small){
     font-size: 1.1rem;
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     font-size: 1.4rem;
   }
 
   &Title{
-    color: #57D7F0;
+    color: $turquoise-blue-color;
   }
 }

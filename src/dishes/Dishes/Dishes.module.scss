@@ -1,10 +1,12 @@
+@import '../../styles/_variables';
+
 .wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
-  @media screen and(min-width: 1024px){
+  @media screen and(min-width: $break-point-large){
     flex-wrap: nowrap;
     justify-content: flex-end;
     margin-bottom: 30px;
@@ -13,7 +15,7 @@
   &Dropdown{
       margin-bottom: 20px;
 
-    @media screen and(min-width: 670px){
+    @media screen and(min-width: $break-point-small){
      margin-left:  20px;
 
       &:first-child{
@@ -21,7 +23,7 @@
       }
     }
 
-    @media screen and(min-width: 1024px){
+    @media screen and(min-width: $break-point-large){
       margin-bottom: 0;
     }
   }

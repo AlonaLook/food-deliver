@@ -1,19 +1,23 @@
+@import '../../styles/_variables';
+
 .subMenu{
-  list-style-image: url('./images/next.svg');
+  list-style-type: none;
   padding: 15px 0;
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: $break-point-large){
     width: 200px;
-    list-style-type: none;
-    list-style-image: none;
     padding: 18px 0 0;
   }
 
   &Item{
     position: relative;
     padding: 4px 20px;
-    background: #1d1b1b61;
-    transition: all linear 0.5s;
+    background: $primary-dark-color;
+    transition: all 0.3s linear;
+
+    @media screen and (min-width: $break-point-large){
+     background: $silver-chalice-color;
+    }
 
     &::after{
       position: absolute;
@@ -22,12 +26,12 @@
       height: 1px;
       bottom: 0;
       left: 5%;
-      background: lightgrey;
+      background: $alto-color;
     }
 
     &:last-child{
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: $break-point-large){
         &:after{
           display: none;
         }
@@ -35,7 +39,7 @@
     }
 
     &:hover{
-      background: lightgrey;
+      background: $alto-color;
     }
   }
 }
@@ -43,5 +47,5 @@
 .menuLink{
   display: block;
   text-decoration: none;
-  color: white;
+  color: $primary-light-color;
 }
