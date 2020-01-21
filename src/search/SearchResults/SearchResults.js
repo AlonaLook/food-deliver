@@ -45,7 +45,7 @@ const SearchResults = memo(({ location, searchFetch, listResults }) => {
           <span className={style.query}>
             "{query}"
           </span>
-          { ` is total count of ${countItems === 1 ? countItems + PlURAL : countItems + SINGULAR}`}
+          { ` is total count of ${countItems === 1 ?  countItems + SINGULAR : countItems + PlURAL}`}
         </div>
         <ListMeal listMeal={listResults}/>
       </>
